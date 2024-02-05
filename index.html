@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Link Tree</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body style="height: 100vh" class="bg-gray-900">
+    <div class="flex justify-center mt-5">
+      <img
+        src="https://media.licdn.com/dms/image/D5603AQER7-yLcaf6dQ/profile-displayphoto-shrink_800_800/0/1705138719796?e=1710979200&v=beta&t=vQ16k-nmXdDDiXMvZmMf7zrRrvYqV6knglHHXVWBIbg"
+        class="h-20 w-20 rounded-full border-4"
+        alt="Mishra_Photo"
+      />
+    </div>
+    <div class="text-center m-2">
+      <h1 class="text-white text-3xl font-extrabold">
+        I'm <br />Himangshu Mishra
+      </h1>
+      <p class="text-gray-300">Connect with me on various platforms</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-6 mt-8">
+      <a
+        href="https://github.com/himangshumishra"
+        class="link-cont text-center border-4 p-6 rounded-xl"
+      >
+        <h2 class="p-4 text-3xl font-semibold text-white">Website</h2>
+        <p class="text-gray-300">visit now</p>
+      </a>
+
+      <a
+        href="https://github.com/himangshumishra"
+        class="link-cont text-center border-4 p-6 rounded-xl"
+      >
+        <h2 class="p-4 text-3xl font-semibold text-white">website</h2>
+        <p class="text-gray-300">visit now</p>
+      </a>
+
+      <a
+        href="https://github.com/himangshumishra"
+        class="link-cont text-center border-4 p-6 rounded-xl"
+      >
+        <h2 class="p-4 text-3xl font-semibold text-white">website</h2>
+        <p class="text-gray-300">visit now</p>
+      </a>
+
+      <a
+        href="https://github.com/himangshumishra"
+        class="link-cont text-center border-4 p-6 rounded-xl"
+      >
+        <h2 class="p-4 text-3xl font-semibold text-white">website</h2>
+        <p class="text-gray-300">visit now</p>
+      </a>
+    </div>
+
+    <script>
+      function getRandomColor() {
+        let chrs = "0123456789ABCDEF";
+        let hashcode = "#";
+        for (let i = 0; i < 6; i++) {
+          hashcode += chrs[Math.floor(Math.random() * 16)];
+        }
+        return hashcode;
+      }
+
+      function colorChanger() {
+        document.body.style.background = `linear-gradient(45deg, ${getRandomColor()}, ${getRandomColor()}, ${getRandomColor()}, ${getRandomColor()})`;
+
+        document.querySelectorAll(".link-cont").forEach((linkconts) => {
+          linkconts.style.background = getRandomColor();
+          linkconts.style.boxShadow = `0 0 10px ${getRandomColor()}, 0 0 20px ${getRandomColor()}, 0 0 30px ${getRandomColor()}`;
+        });
+      }
+
+      setInterval(colorChanger, 1100);
+    </script>
+  </body>
+</html>
